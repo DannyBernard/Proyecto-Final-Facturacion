@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_final_de_Facturacion.Entidades
 {
-    class Usuario
+    public class Usuario
     {
         [Key]
         public int IDUsuario { get; set; }
