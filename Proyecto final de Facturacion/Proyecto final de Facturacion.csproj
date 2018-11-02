@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Articulos.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Credito.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Form1.cs">
