@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_final_de_Facturacion
+namespace Proyecto_final_de_Facturacion.UI
 {
-    public partial class Form1 : Form
+    public partial class PanelPrincipal : Form
     {
-        public Form1()
+        public PanelPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
