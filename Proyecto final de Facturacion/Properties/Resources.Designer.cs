@@ -63,6 +63,16 @@ namespace Proyecto_final_de_Facturacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486564400_account_81513 {
+            get {
+                object obj = ResourceManager.GetObject("1486564400-account_81513", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -96,6 +106,16 @@ namespace Proyecto_final_de_Facturacion.Properties {
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_png_image_5a39e28a810944_82079425151374298652851980 {
+            get {
+                object obj = ResourceManager.GetObject("folder-png-image-5a39e28a810944.82079425151374298652851980", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

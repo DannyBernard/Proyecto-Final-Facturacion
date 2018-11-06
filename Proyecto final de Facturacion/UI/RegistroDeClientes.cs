@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_final_de_Facturacion.UI
 {
-    public partial class CreacionDeUsuario : Form
+    public partial class RegistroDeClientes : Form
     {
-        public CreacionDeUsuario()
+        public RegistroDeClientes()
         {
             InitializeComponent();
         }

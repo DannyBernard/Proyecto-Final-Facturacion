@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_final_de_Facturacion.UI
 {
-    public partial class PanelPrincipal : Form
+    public partial class RegistroDeUsuarios : Form
     {
-        public PanelPrincipal()
+        public RegistroDeUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RegistroDeUsuarios usuario = new RegistroDeUsuarios();
-            usuario.Show();
-            usuario.MdiParent = this;
         }
     }
 }

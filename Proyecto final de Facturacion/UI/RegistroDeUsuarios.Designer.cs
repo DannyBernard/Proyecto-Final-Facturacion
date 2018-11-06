@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_final_de_Facturacion.UI
 {
-    partial class CreacionDeUsuario
+    partial class RegistroDeUsuarios
     {
         /// <summary>
         /// Required designer variable.

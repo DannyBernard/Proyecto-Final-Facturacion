@@ -67,17 +67,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\CreacionDeUsuario.cs">
+    <Compile Include="UI\RegistroDeUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CreacionDeUsuario.Designer.cs">
-      <DependentUpon>CreacionDeUsuario.cs</DependentUpon>
+    <Compile Include="UI\RegistroDeUsuarios.Designer.cs">
+      <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PanelPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\PanelPrincipal.Designer.cs">
       <DependentUpon>PanelPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroDeClientes.Designer.cs">
+      <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -92,8 +98,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\CreacionDeUsuario.resx">
-      <DependentUpon>CreacionDeUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="UI\RegistroDeClientes.resx">
+      <DependentUpon>RegistroDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RegistroDeUsuarios.resx">
+      <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PanelPrincipal.resx">
       <DependentUpon>PanelPrincipal.cs</DependentUpon>
@@ -141,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-png-image-5a39e28a810944.82079425151374298652851980.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564400-account_81513.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
