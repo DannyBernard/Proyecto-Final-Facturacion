@@ -16,5 +16,6 @@ namespace Proyecto_final_de_Facturacion.UI
         {
             InitializeComponent();
         }
-    }
+
+       
 }

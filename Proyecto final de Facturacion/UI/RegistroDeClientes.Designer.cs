@@ -149,6 +149,7 @@
             this.button1.Text = "Nuevo";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button1.UseVisualStyleBackColor = true;
+       
             // 
             // button2
             // 
