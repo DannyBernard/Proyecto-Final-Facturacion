@@ -23,5 +23,7 @@ namespace Proyecto_final_de_Facturacion.UI
             usuario.Show();
             usuario.MdiParent = this;
         }
+
+        
     }
 }

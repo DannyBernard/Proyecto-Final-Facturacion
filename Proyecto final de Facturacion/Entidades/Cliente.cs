@@ -15,6 +15,7 @@ namespace Proyecto_final_de_Facturacion.Entidades
         public string Cedula { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
+        public string Telefono2 { get; set; }
 
         public Cliente()
         {
@@ -23,6 +24,7 @@ namespace Proyecto_final_de_Facturacion.Entidades
             Cedula = string.Empty;
             Direccion = string.Empty;
             Telefono = string.Empty;
+            Telefono2 = string.Empty;
 
         }
 

@@ -100,7 +100,7 @@ namespace Proyecto_final_de_Facturacion.UI
             {
                 if (!ExiteEnLaDb())
                 {
-                    MessageBox.Show("No Se Puede Modificar No Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No Se Puede Modificar No Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 paso = repository.Modificar(usuario);
@@ -127,9 +127,12 @@ namespace Proyecto_final_de_Facturacion.UI
                 return;
             }
             if (repository.Eliminar(id))
-                MessageBox.Show("Usuario Eliminado");
+            {
+                MessageBox.Show("Usuario Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
             else
-                MessageBox.Show("No se Pudo Eliminar");
+                MessageBox.Show("No se Pudo Eliminar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
         }
 
@@ -144,12 +147,12 @@ namespace Proyecto_final_de_Facturacion.UI
 
             if (usuario != null)
             {
-                MessageBox.Show("Usuario Econtrado");
+                MessageBox.Show("Usuario Econtrado","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 LlenarCampo(usuario);
             }
             else
             {
-                MessageBox.Show("Usuario no Exite");
+                MessageBox.Show("Usuario no Exite","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }

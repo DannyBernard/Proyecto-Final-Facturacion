@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,14 +38,17 @@
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.Telefono2maskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +115,7 @@
             this.CedulamaskedTextBox.Location = new System.Drawing.Point(132, 349);
             this.CedulamaskedTextBox.Mask = "999-9999999-9";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
-            this.CedulamaskedTextBox.Size = new System.Drawing.Size(267, 22);
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(112, 22);
             this.CedulamaskedTextBox.TabIndex = 7;
             // 
             // DirecciontextBox
@@ -121,13 +125,13 @@
             this.DirecciontextBox.Size = new System.Drawing.Size(267, 22);
             this.DirecciontextBox.TabIndex = 8;
             // 
-            // maskedTextBox2
+            // TelefonomaskedTextBox
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(132, 515);
-            this.maskedTextBox2.Mask = "999-999-9999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(267, 22);
-            this.maskedTextBox2.TabIndex = 9;
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(132, 518);
+            this.TelefonomaskedTextBox.Mask = "(999)-999-9999";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(112, 22);
+            this.TelefonomaskedTextBox.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -139,50 +143,65 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // NuevoButton
             // 
-            this.button1.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.document_new;
-            this.button1.Location = new System.Drawing.Point(30, 562);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 66);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Nuevo";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseVisualStyleBackColor = true;
-       
+            this.NuevoButton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.document_new;
+            this.NuevoButton.Location = new System.Drawing.Point(30, 562);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(80, 66);
+            this.NuevoButton.TabIndex = 11;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
-            // button2
+            // GuardarButton
             // 
-            this.button2.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.save;
-            this.button2.Location = new System.Drawing.Point(182, 562);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 66);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Guardar";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button2.UseVisualStyleBackColor = true;
+            this.GuardarButton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.save;
+            this.GuardarButton.Location = new System.Drawing.Point(182, 562);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(75, 66);
+            this.GuardarButton.TabIndex = 12;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
-            // button3
+            // EliminarButton
             // 
-            this.button3.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.delete;
-            this.button3.Location = new System.Drawing.Point(324, 562);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 66);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Eliminar";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button3.UseVisualStyleBackColor = true;
+            this.EliminarButton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.delete;
+            this.EliminarButton.Location = new System.Drawing.Point(324, 562);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(75, 66);
+            this.EliminarButton.TabIndex = 13;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
-            // button4
+            // BuscarButton
             // 
-            this.button4.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.search;
-            this.button4.Location = new System.Drawing.Point(281, 177);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 68);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Buscar";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button4.UseVisualStyleBackColor = true;
+            this.BuscarButton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.search;
+            this.BuscarButton.Location = new System.Drawing.Point(281, 177);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(75, 68);
+            this.BuscarButton.TabIndex = 14;
+            this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
+            // Telefono2maskedTextBox
+            // 
+            this.Telefono2maskedTextBox.Location = new System.Drawing.Point(281, 516);
+            this.Telefono2maskedTextBox.Mask = "(999)-999-9999";
+            this.Telefono2maskedTextBox.Name = "Telefono2maskedTextBox";
+            this.Telefono2maskedTextBox.Size = new System.Drawing.Size(118, 22);
+            this.Telefono2maskedTextBox.TabIndex = 16;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // RegistroDeClientes
             // 
@@ -190,12 +209,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(429, 640);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Telefono2maskedTextBox);
+            this.Controls.Add(this.BuscarButton);
+            this.Controls.Add(this.EliminarButton);
+            this.Controls.Add(this.GuardarButton);
+            this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.CedulamaskedTextBox);
             this.Controls.Add(this.NombretextBox);
@@ -209,6 +229,7 @@
             this.Text = "RegistroDeClientes";
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,11 +246,13 @@
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
         private System.Windows.Forms.TextBox DirecciontextBox;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button NuevoButton;
+        private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.MaskedTextBox Telefono2maskedTextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
