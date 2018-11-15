@@ -24,6 +24,18 @@ namespace Proyecto_final_de_Facturacion.UI
             usuario.MdiParent = this;
         }
 
-        
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroDeClientes registroDeClientes = new RegistroDeClientes();
+            registroDeClientes.Show();
+            registroDeClientes.MdiParent = this;
+        }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroDeArticulos registroDeArticulos = new RegistroDeArticulos();
+            registroDeArticulos.Show();
+            registroDeArticulos.MdiParent = this;
+        }
     }
 }

@@ -66,16 +66,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\RegistroDeArticulos.cs">
+    <Compile Include="UI\Consulta\ConsultaArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\RegistroDeArticulos.Designer.cs">
+    <Compile Include="UI\Consulta\ConsultaArticulos.Designer.cs">
+      <DependentUpon>ConsultaArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaCliente.Designer.cs">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\ConsultaUsuario.Designer.cs">
+      <DependentUpon>ConsultaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registro\RegistroDeArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\RegistroDeArticulos.Designer.cs">
       <DependentUpon>RegistroDeArticulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegistroDeUsuarios.cs">
+    <Compile Include="UI\Registro\RegistroDeUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\RegistroDeUsuarios.Designer.cs">
+    <Compile Include="UI\Registro\RegistroDeUsuarios.Designer.cs">
       <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PanelPrincipal.cs">
@@ -84,10 +102,10 @@
     <Compile Include="UI\PanelPrincipal.Designer.cs">
       <DependentUpon>PanelPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegistroDeClientes.cs">
+    <Compile Include="UI\Registro\RegistroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\RegistroDeClientes.Designer.cs">
+    <Compile Include="UI\Registro\RegistroDeClientes.Designer.cs">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
@@ -103,13 +121,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\RegistroDeArticulos.resx">
+    <EmbeddedResource Include="UI\Consulta\ConsultaArticulos.resx">
+      <DependentUpon>ConsultaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\ConsultaCliente.resx">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\ConsultaUsuario.resx">
+      <DependentUpon>ConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\RegistroDeArticulos.resx">
       <DependentUpon>RegistroDeArticulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\RegistroDeClientes.resx">
+    <EmbeddedResource Include="UI\Registro\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\RegistroDeUsuarios.resx">
+    <EmbeddedResource Include="UI\Registro\RegistroDeUsuarios.resx">
       <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PanelPrincipal.resx">
