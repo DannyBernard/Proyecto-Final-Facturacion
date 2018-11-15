@@ -15,6 +15,10 @@ namespace Proyecto_final_de_Facturacion.Entidades
         public int Cantidad { get; set; }
         public float Precio { get; set; }
         public float Itebis { get; set; }
+        public float Costo { get; set; }
+        public float Ganancia { get; set; }
+        public DateTime FechaDevencimineto { get; set; }
+
 
         public Articulos()
         {
@@ -23,6 +27,9 @@ namespace Proyecto_final_de_Facturacion.Entidades
             Cantidad = 0;
             Precio = 0;
             Itebis = 0;
+            Costo = 0;
+            Ganancia = 0;
+            FechaDevencimineto = DateTime.Now;
         }
     }
 }

@@ -167,5 +167,5 @@ namespace Proyecto_final_de_Facturacion.UI
                 MessageBox.Show("Cliente no Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    };
+    }
 }
