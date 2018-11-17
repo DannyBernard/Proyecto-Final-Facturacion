@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -38,22 +39,24 @@
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 201);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(907, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(797, 275);
             this.dataGridView1.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(515, 157);
+            this.label4.Location = new System.Drawing.Point(450, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 18;
@@ -62,7 +65,7 @@
             // HastadateTimePicker
             // 
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(611, 153);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(546, 147);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(171, 22);
             this.HastadateTimePicker.TabIndex = 17;
@@ -70,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 158);
+            this.label3.Location = new System.Drawing.Point(101, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 16;
@@ -79,7 +82,7 @@
             // DesdedateTimePicker
             // 
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(262, 154);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(197, 148);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(171, 22);
             this.DesdedateTimePicker.TabIndex = 15;
@@ -97,7 +100,7 @@
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(442, 77);
             this.CriteriotextBox.Name = "CriteriotextBox";
-            this.CriteriotextBox.Size = new System.Drawing.Size(422, 22);
+            this.CriteriotextBox.Size = new System.Drawing.Size(280, 22);
             this.CriteriotextBox.TabIndex = 12;
             // 
             // FiltrocomboBox
@@ -121,20 +124,25 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.search;
-            this.Buscarbutton.Location = new System.Drawing.Point(887, 52);
+            this.Buscarbutton.Location = new System.Drawing.Point(754, 42);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 68);
             this.Buscarbutton.TabIndex = 14;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ConsultaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1005, 505);
+            this.ClientSize = new System.Drawing.Size(861, 532);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.HastadateTimePicker);
@@ -148,6 +156,7 @@
             this.Name = "ConsultaArticulos";
             this.Text = "ConsultaArticulos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +174,6 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

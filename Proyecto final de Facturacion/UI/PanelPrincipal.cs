@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_final_de_Facturacion.UI.Consulta;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,13 @@ namespace Proyecto_final_de_Facturacion.UI
             RegistroDeArticulos registroDeArticulos = new RegistroDeArticulos();
             registroDeArticulos.Show();
             registroDeArticulos.MdiParent = this;
+        }
+
+        private void articulosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaArticulos consulta = new ConsultaArticulos();
+            consulta.Show();
+            consulta.MdiParent = this;
         }
     }
 }

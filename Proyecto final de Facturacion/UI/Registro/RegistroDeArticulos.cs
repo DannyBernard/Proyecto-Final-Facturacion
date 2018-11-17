@@ -62,25 +62,25 @@ namespace Proyecto_final_de_Facturacion.UI
         }
         public bool Validar(int error)
         {
-            bool paso = false;
+            bool paso = true;
           
            
             
             if(error==2 && FechadateTimePicker.Value == DateTime.Now || FechadateTimePicker.Value< DateTime.Now)
             {
                 errorProvider1.SetError(FechadateTimePicker, "Fecha Fuera De Rango");
-                paso = true;
+                paso = false;
             }
             if (error == 2 && GanancianumericUpDown.Value == 0)
             {
                 errorProvider1.SetError(GanancianumericUpDown, "Ganancia en 0");
-                paso = true;
+                paso = false;
             }
 
             if (error == 2 && CostonumericUpDown.Value == 0)
             {
                 errorProvider1.SetError(CostonumericUpDown, "Costo en 0");
-                paso = true;
+                paso = false;
             }
 
             if (error == 2 && PrecionumericUpDown.Value == 0)
@@ -92,13 +92,13 @@ namespace Proyecto_final_de_Facturacion.UI
             if (error == 2 && CantidadnumericUpDown.Value == 0)
             {
                 errorProvider1.SetError(CantidadnumericUpDown, "Cantidad En 0");
-                paso = true;
+                paso = false;
             }
 
             if (string.IsNullOrWhiteSpace(DescripciontextBox.Text))
             {
                 errorProvider1.SetError(DescripciontextBox, "Campo Vacio");
-                paso = true;
+                paso = false;
             }
             return paso;
         }
