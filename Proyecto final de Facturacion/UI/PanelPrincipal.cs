@@ -1,4 +1,5 @@
 ﻿using Proyecto_final_de_Facturacion.UI.Consulta;
+using Proyecto_final_de_Facturacion.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,27 @@ namespace Proyecto_final_de_Facturacion.UI
             ConsultaArticulos consulta = new ConsultaArticulos();
             consulta.Show();
             consulta.MdiParent = this;
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaCliente consultaCliente = new ConsultaCliente();
+            consultaCliente.Show();
+            consultaCliente.MdiParent = this;
+        }
+
+        private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaUsuario consultaUsuario = new ConsultaUsuario();
+            consultaUsuario.Show();
+            consultaUsuario.MdiParent = this;
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturacion facturacion = new Facturacion();
+            facturacion.Show();
+            facturacion.MdiParent = this;
         }
     }
 }

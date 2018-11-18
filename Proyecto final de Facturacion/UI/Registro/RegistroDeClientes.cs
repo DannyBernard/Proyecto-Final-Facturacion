@@ -118,6 +118,7 @@ namespace Proyecto_final_de_Facturacion.UI
             if (paso)
             {
                 MessageBox.Show("Se Guardo Con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
             }
             else
             {
@@ -154,7 +155,7 @@ namespace Proyecto_final_de_Facturacion.UI
             Cliente cliente = new Cliente();
 
             int.TryParse(IDnumericUpDown.Text, out id);
-            repository.Buscar(id);
+          cliente =  repository.Buscar(id);
            
 
             if (cliente != null)

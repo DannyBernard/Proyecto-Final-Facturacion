@@ -71,6 +71,11 @@ namespace Proyecto_final_de_Facturacion.UI
                 errorProvider1.SetError(FechadateTimePicker, "Fecha Fuera De Rango");
                 paso = false;
             }
+            if(error==2 && ItbnumericUpDown.Value > 2)
+            {
+                errorProvider1.SetError(ItbnumericUpDown, "Itebis no Valido");
+                paso = false;
+            }
             if (error == 2 && GanancianumericUpDown.Value == 0)
             {
                 errorProvider1.SetError(GanancianumericUpDown, "Ganancia en 0");
@@ -184,9 +189,9 @@ namespace Proyecto_final_de_Facturacion.UI
             Articulos articulos = new Articulos();
 
             int.TryParse(IDnumericUpDown.Text, out id);
-            repository.Buscar(id);
-
-            if(articulos != null)
+           articulos = repository.Buscar(id);
+            
+            if (articulos != null)
             {
                 MessageBox.Show("Articulos Encotrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LlenarCampo(articulos);

@@ -31,7 +31,7 @@ namespace Proyecto_final_de_Facturacion.UI
         public Usuario LlenarClase()
         {
             Usuario usuario = new Usuario();
-            usuario.IDUsuario = Convert.ToInt32(IDnumericUpDown);
+            usuario.IDUsuario = Convert.ToInt32(IDnumericUpDown.Value);
             usuario.Cuenta = UsuariotextBox.Text;
             usuario.Clave = PassawordtextBox.Text;
             usuario.Nombre = NombretextBox.Text;
@@ -108,6 +108,7 @@ namespace Proyecto_final_de_Facturacion.UI
             if (paso)
             {
                 MessageBox.Show("Guardado con Exito", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
             }
             else
             {

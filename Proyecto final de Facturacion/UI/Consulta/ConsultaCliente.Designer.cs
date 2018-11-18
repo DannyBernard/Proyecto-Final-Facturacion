@@ -104,6 +104,14 @@
             // 
             this.FiltrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrocomboBox.FormattingEnabled = true;
+            this.FiltrocomboBox.Items.AddRange(new object[] {
+            "ID",
+            "Nombre ",
+            "Cedula ",
+            "Direccion  ",
+            "Telefono ",
+            "Telefono 2",
+            "Todos"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(58, 47);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(267, 24);
@@ -128,6 +136,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // ConsultaCliente
             // 
