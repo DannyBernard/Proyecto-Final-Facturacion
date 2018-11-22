@@ -13,6 +13,7 @@ namespace Proyecto_final_de_Facturacion.DAL
         public DbSet<Usuario> Usario { get; set; }
         public DbSet<Articulos> Articulos{ get; set; }
         public DbSet<Cliente> Clientes{ get; set; }
+        public DbSet<Factura> Facturas { get; set; }
        
 
         public Contexto() : base("ConStr")

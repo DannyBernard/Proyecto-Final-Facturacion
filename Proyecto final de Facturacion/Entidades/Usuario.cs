@@ -14,6 +14,7 @@ namespace Proyecto_final_de_Facturacion.Entidades
         public string Cuenta { get; set; }
         public string Clave { get; set; }
         public string Nombre { get; set; }
+        public decimal TotalVentas { get; set; }
         public bool Pocision { get; set; }
 
         public Usuario()

@@ -22,14 +22,10 @@ namespace Proyecto_final_de_Facturacion.Entidades
 
         public Articulos()
         {
-            IDArticulos = 0;
-            Descripcion = string.Empty;
-            Cantidad = 0;
-            Precio = 0;
-            Itebis = 0;
-            Costo = 0;
-            Ganancia = 0;
-            FechaDevencimineto = DateTime.Now;
+           
+        }public override string ToString()
+        {
+            return this.Descripcion;
         }
     }
 }

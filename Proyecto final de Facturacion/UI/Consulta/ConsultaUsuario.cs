@@ -20,7 +20,7 @@ namespace Proyecto_final_de_Facturacion.UI.Consulta
         public ConsultaUsuario()
         {
             InitializeComponent();
-            repositoryBase = new RepositoryBase<Usuario>();
+            repositoryBase = new RepositoryBase<Usuario>(new DAL.Contexto());
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)

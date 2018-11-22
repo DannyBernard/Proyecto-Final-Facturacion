@@ -12,6 +12,10 @@ namespace Proyecto_final_de_Facturacion.BLL
    public class RepositoryBase<T>: IDisposable, IRepository<T>where T:class
     {
         internal Contexto _contexto;
+        public RepositoryBase(Contexto contexto)
+        {
+            _contexto = new Contexto();
+        }
         public RepositoryBase()
         {
             _contexto = new Contexto();
@@ -98,5 +102,6 @@ namespace Proyecto_final_de_Facturacion.BLL
             _contexto.Dispose();
             throw new NotImplementedException();
         }
+        
     }
 }

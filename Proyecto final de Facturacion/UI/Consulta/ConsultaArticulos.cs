@@ -15,42 +15,24 @@ namespace Proyecto_final_de_Facturacion.UI.Consulta
 {
     public partial class ConsultaArticulos : Form
     {
-        RepositoryBase<Articulos> repositoryBase;
-        Expression<Func<Articulos, bool>> filtro = x => true;
+
+        private List<Articulos> articulos = new List<Articulos>();
         public ConsultaArticulos()
         {
             InitializeComponent();
-            repositoryBase = new RepositoryBase<Articulos>();
+           
         }
 
-        private bool Validar(int error)
-        {
-            bool paso = true; 
-            int num = 0;
-            if (error == 1 && string.IsNullOrEmpty(CriteriotextBox.Text))
-            {
-                errorProvider1.SetError(CriteriotextBox, "Campo Vacio");
-                paso = false;
-            }
-            if(error ==2&& int.TryParse(CriteriotextBox.Text,out num) == false)
-            {
-                errorProvider1.SetError(CriteriotextBox, "Ingrese un numero");
-                paso = false;
-            }
-            if(error==3&& int.TryParse(CriteriotextBox.Text,out num) == true)
-            {
-                errorProvider1.SetError(CriteriotextBox, "Ingrese caracter");
-                paso = false;
-            }
-            return paso;
-        }
+       
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Articulos>();
-            if (CriteriotextBox.Text.Trim().Length > 0)
+            RepositorioBase<Articulo> repositorio;
+            repositorio = new RepositorioBase<Articulo>();
+            var filtro = new List<Articulo>();
+            int id;
+            if (CristeriotextBox.Text.Trim().Length >= 0)
             {
-
 
                 switch (FiltrocomboBox.SelectedIndex)
                 {

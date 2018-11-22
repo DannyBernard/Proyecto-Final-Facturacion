@@ -67,5 +67,10 @@ namespace Proyecto_final_de_Facturacion.UI
             facturacion.Show();
             facturacion.MdiParent = this;
         }
+
+        private void PanelPrincipal_Load(object sender, EventArgs e)
+        {
+          //  usuarioToolStripMenuItem.Visible = Program.usuario.Pocision;
+        }
     }
 }

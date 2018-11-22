@@ -109,7 +109,7 @@ namespace Proyecto_final_de_Facturacion.UI
         }
         public bool ExiteEnLaDb()
         {
-            repository = new RepositoryBase<Articulos>();
+            repository = new RepositoryBase<Articulos>(new DAL.Contexto());
             Articulos articulos = new Articulos();
             articulos = repository.Buscar((int)IDnumericUpDown.Value);
             return (articulos != null);
@@ -162,7 +162,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Articulos>();
+            repository = new RepositoryBase<Articulos>(new DAL.Contexto());
             int id;
             int.TryParse(IDnumericUpDown.Text, out id);
             if (!ExiteEnLaDb())
@@ -184,7 +184,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Articulos>();
+            repository = new RepositoryBase<Articulos>(new DAL.Contexto());
             int id;
             Articulos articulos = new Articulos();
 

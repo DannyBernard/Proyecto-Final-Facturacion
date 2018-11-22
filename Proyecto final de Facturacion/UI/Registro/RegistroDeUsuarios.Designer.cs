@@ -38,18 +38,19 @@
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.PosicionnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.AdminitradorradioButton = new System.Windows.Forms.RadioButton();
+            this.UsuarioradioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PosicionnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -119,28 +120,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 469);
+            this.label5.Location = new System.Drawing.Point(14, 453);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 17);
+            this.label5.Size = new System.Drawing.Size(39, 17);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Posicion";
-            // 
-            // PosicionnumericUpDown
-            // 
-            this.PosicionnumericUpDown.Location = new System.Drawing.Point(87, 467);
-            this.PosicionnumericUpDown.Name = "PosicionnumericUpDown";
-            this.PosicionnumericUpDown.Size = new System.Drawing.Size(58, 22);
-            this.PosicionnumericUpDown.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(84, 447);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(320, 17);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Digite 0 para usario normal 0 1 para Adminitrador";
+            this.label5.Text = "Nivel";
             // 
             // pictureBox1
             // 
@@ -179,7 +163,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::Proyecto_final_de_Facturacion.Properties.Resources.save;
-            this.Guardarbutton.Location = new System.Drawing.Point(170, 504);
+            this.Guardarbutton.Location = new System.Drawing.Point(184, 504);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 70);
             this.Guardarbutton.TabIndex = 12;
@@ -204,14 +188,47 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // AdminitradorradioButton
+            // 
+            this.AdminitradorradioButton.AutoSize = true;
+            this.AdminitradorradioButton.Location = new System.Drawing.Point(6, 21);
+            this.AdminitradorradioButton.Name = "AdminitradorradioButton";
+            this.AdminitradorradioButton.Size = new System.Drawing.Size(109, 21);
+            this.AdminitradorradioButton.TabIndex = 16;
+            this.AdminitradorradioButton.TabStop = true;
+            this.AdminitradorradioButton.Text = "Adminitrador";
+            this.AdminitradorradioButton.UseVisualStyleBackColor = true;
+            // 
+            // UsuarioradioButton
+            // 
+            this.UsuarioradioButton.AutoSize = true;
+            this.UsuarioradioButton.Location = new System.Drawing.Point(174, 15);
+            this.UsuarioradioButton.Name = "UsuarioradioButton";
+            this.UsuarioradioButton.Size = new System.Drawing.Size(78, 21);
+            this.UsuarioradioButton.TabIndex = 17;
+            this.UsuarioradioButton.TabStop = true;
+            this.UsuarioradioButton.Text = "Usuario";
+            this.UsuarioradioButton.UseVisualStyleBackColor = true;
+          
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.UsuarioradioButton);
+            this.groupBox1.Controls.Add(this.AdminitradorradioButton);
+            this.groupBox1.Location = new System.Drawing.Point(59, 435);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(281, 48);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // RegistroDeUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(440, 586);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.PosicionnumericUpDown);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -229,9 +246,10 @@
             this.Name = "RegistroDeUsuarios";
             this.Text = "CreacionDeUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PosicionnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,8 +271,9 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown PosicionnumericUpDown;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.RadioButton UsuarioradioButton;
+        private System.Windows.Forms.RadioButton AdminitradorradioButton;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

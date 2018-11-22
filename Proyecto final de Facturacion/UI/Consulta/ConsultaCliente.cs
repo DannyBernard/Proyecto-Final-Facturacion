@@ -20,7 +20,7 @@ namespace Proyecto_final_de_Facturacion.UI.Consulta
         public ConsultaCliente()
         {
             InitializeComponent();
-            repositoryBase = new RepositoryBase<Cliente>();
+            repositoryBase = new RepositoryBase<Cliente>(new DAL.Contexto());
             
         }
 

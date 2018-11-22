@@ -17,7 +17,7 @@ namespace Proyecto_final_de_Facturacion.UI
         RepositoryBase<Cliente> repository;
         public RegistroDeClientes()
         {
-            repository = new RepositoryBase<Cliente>();
+            repository = new RepositoryBase<Cliente>(new DAL.Contexto());
             InitializeComponent();
         }
 
@@ -55,7 +55,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         public bool ExiteEnLaDb()
         {
-            RepositoryBase<Cliente> repository = new RepositoryBase<Cliente>();
+            RepositoryBase<Cliente> repository = new RepositoryBase<Cliente>(new DAL.Contexto());
             Cliente cliente = repository.Buscar((int)IDnumericUpDown.Value);
             return (cliente != null);
         }
@@ -95,7 +95,7 @@ namespace Proyecto_final_de_Facturacion.UI
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             bool paso = false;
-            repository = new RepositoryBase<Cliente>();
+            repository = new RepositoryBase<Cliente>(new DAL.Contexto());
             Cliente cliente;
 
             if (!Validar())
@@ -128,7 +128,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Cliente>();
+            repository = new RepositoryBase<Cliente>(new DAL.Contexto());
             int id;
             int.TryParse(IDnumericUpDown.Text, out id);
             if (!ExiteEnLaDb())
@@ -150,7 +150,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Cliente>();
+            repository = new RepositoryBase<Cliente>(new DAL.Contexto());
             int id;
             Cliente cliente = new Cliente();
 

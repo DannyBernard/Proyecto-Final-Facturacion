@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_final_de_Facturacion.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace Proyecto_final_de_Facturacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+
         }
+        public static Usuario usuario = null;
     }
-}
+    }
+

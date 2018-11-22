@@ -18,6 +18,7 @@ namespace Proyecto_final_de_Facturacion.UI
         public RegistroDeUsuarios()
         {
             InitializeComponent();
+            AdminitradorradioButton.Checked = true;
         }
 
         public void Limpiar()
@@ -26,7 +27,7 @@ namespace Proyecto_final_de_Facturacion.UI
             UsuariotextBox.Text = string.Empty;
             PassawordtextBox.Text = string.Empty;
             NombretextBox.Text = string.Empty;
-            PosicionnumericUpDown.Value = 0;
+            AdminitradorradioButton.Checked= false;
         }
         public Usuario LlenarClase()
         {
@@ -35,7 +36,10 @@ namespace Proyecto_final_de_Facturacion.UI
             usuario.Cuenta = UsuariotextBox.Text;
             usuario.Clave = PassawordtextBox.Text;
             usuario.Nombre = NombretextBox.Text;
-            usuario.Pocision = Convert.ToBoolean(PosicionnumericUpDown.Value);
+            usuario.Pocision=(AdminitradorradioButton.Checked);
+            
+
+            
             return usuario;
         }
         public void LlenarCampo(Usuario usuario)
@@ -44,7 +48,8 @@ namespace Proyecto_final_de_Facturacion.UI
             UsuariotextBox.Text = usuario.Cuenta;
             PassawordtextBox.Text = usuario.Clave;
             NombretextBox.Text = usuario.Nombre;
-            PosicionnumericUpDown.Value =Convert.ToInt32( usuario.Pocision);
+           
+         
         }
 
         public bool Validar()
@@ -65,16 +70,12 @@ namespace Proyecto_final_de_Facturacion.UI
                 errorProvider1.SetError(NombretextBox, "Campo Vacio");
                 paso = false;
             }
-            if(PosicionnumericUpDown.Value < 0 && PosicionnumericUpDown.Value > 1)
-            {
-                errorProvider1.SetError(IDnumericUpDown, "El valor Debe ser 0 o 1");
-                paso = false;
-            }
+           
             return paso;
         }
         public bool ExiteEnLaDb()
         {
-            repository = new RepositoryBase<Usuario>();
+            repository = new RepositoryBase<Usuario>(new DAL.Contexto());
             Usuario usuario = repository.Buscar((int)IDnumericUpDown.Value);
             return (usuario != null);
         }
@@ -86,14 +87,16 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Usuario>();
+            repository = new RepositoryBase<Usuario>(new DAL.Contexto());
             bool paso = false;
             Usuario usuario;
             if (!Validar())
                 return;
+            usuario = new Usuario();
             usuario = LlenarClase();
             if (IDnumericUpDown.Value == 0)
             {
+            
                 paso = repository.Guardar(usuario);
             }
             else
@@ -114,11 +117,12 @@ namespace Proyecto_final_de_Facturacion.UI
             {
                 MessageBox.Show("No Se Puede Guardar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Usuario>();
+            repository = new RepositoryBase<Usuario>(new DAL.Contexto());
             int id;
             int.TryParse(IDnumericUpDown.Text, out id);
             if (!ExiteEnLaDb())
@@ -139,7 +143,7 @@ namespace Proyecto_final_de_Facturacion.UI
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            repository = new RepositoryBase<Usuario>();
+            repository = new RepositoryBase<Usuario>(new DAL.Contexto());
             int id;
             Usuario usuario = new Usuario();
 
@@ -157,5 +161,8 @@ namespace Proyecto_final_de_Facturacion.UI
             }
 
         }
+
+      
     }
-}
+    }
+
